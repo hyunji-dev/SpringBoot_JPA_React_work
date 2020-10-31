@@ -19,7 +19,7 @@ const Header = () => {
 						<div class="navbar-brand">WebSiteName</div>
 					</div>
 					<ul class="nav navbar-nav">
-						<li class="active"><Link to="/" className="navbar-brand">Notification</Link></li>
+						<li class="active"><Link to="/post" className="navbar-brand">Notification</Link></li>
 						<li>1</li>
 						<li>2</li>
 					</ul>

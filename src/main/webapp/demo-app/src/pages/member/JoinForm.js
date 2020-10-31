@@ -17,7 +17,7 @@ const JoinForm = (props) => {
 		console.log(member);
 	}
 
-	const join = (e) => {
+	const btnJoin = (e) => {
 		e.preventDefault();
 		
 		// // 빈칸체크 및 비밀번호 일치체크 
@@ -85,7 +85,7 @@ const JoinForm = (props) => {
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-9">
-					<button type="submit" class="btn btn-primary btn-block" onClick={join}>Submit</button>
+					<button type="submit" class="btn btn-primary btn-block" onClick={btnJoin}>Submit</button>
 				</div>
 			</div>
 		</form>

@@ -1,12 +1,14 @@
 import './App.css';
-import Header from './components/Header';
 import { Route } from 'react-router-dom';
-import JoinForm from './pages/member/JoinForm';
-import { useEffect } from 'react';
-import LoginForm from './pages/member/LoginForm';
-import { useDispatch } from 'react-redux';
-import { login } from './store';
+import Header from './components/Header';
 import Home from './pages/Home';
+import List from './pages/post/List';
+import SavaForm from './pages/post/SavaForm';
+import LoginForm from './pages/member/LoginForm';
+import JoinForm from './pages/member/JoinForm';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { login } from './store';
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       dispatch(login());
     }
   }, []);
+
   return (
     <div>
       <Header />
@@ -27,6 +30,9 @@ function App() {
       <Route path="/" exact={true} component={Home} />
       <Route path="/joinForm" exact={true} component={JoinForm} />
       <Route path="/loginForm" exact={true} component={LoginForm} />
+      <Route path="/post" exact={true} component={List} />
+      <Route path="/saveForm" exact={true} component={SavaForm} />
+      {/* <Route path="/writeForm" exact={true} component={WriteForm} /> */}
     </div>
   );
 }
